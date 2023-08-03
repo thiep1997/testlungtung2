@@ -28,6 +28,4 @@ jobs:
           
       - name: create-test-case
         run: |
-          python3.9 --version
-          ls -la
           python3.9 cloud-manage-test-cases/create_command.py
