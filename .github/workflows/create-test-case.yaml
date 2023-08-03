@@ -1,9 +1,9 @@
-name: Manual_test_create
+name: create-test-cases
 
 on: workflow_dispatch
 
 jobs:
-  create_command:
+  create-test-case:
     runs-on: ubuntu-latest
 
     steps:
