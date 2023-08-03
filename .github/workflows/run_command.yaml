@@ -1,4 +1,4 @@
-name: Manual test
+name: Manual_test_create
 
 on: workflow_dispatch
 
@@ -20,7 +20,7 @@ jobs:
         run: |
           python -m pip install --upgrade pip
           pip install -r requirements.txt
-      - name: chay code
+      - name: create-test-case
         run: |
           python3.9 --version
           ls -la
