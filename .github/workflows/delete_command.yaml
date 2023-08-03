@@ -3,7 +3,7 @@ name: Manual_test_delete
 on: workflow_dispatch
 
 jobs:
-  do-something:
+  delete_command:
     runs-on: ubuntu-latest
 
     steps:
