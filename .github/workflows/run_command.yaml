@@ -5,12 +5,17 @@ on: workflow_dispatch
 jobs:
   do-something:
     runs-on: ubuntu-latest
-    env:
-      AWS_CONFIG_FILE: .github/workflows/credentials
+
     steps:
       - name: Check out repository code
         uses: actions/checkout@v3
         
+      - name: Configure AWS Credentials
+        uses: aws-actions/configure-aws-credentials@v2
+        with:
+          aws-access-key-id: ${{ secrets.ACCESS_KEY_ID }}
+          aws-secret-access-key: ${{ secrets.SECRET_ACCESS_KEY }}
+          
       - name: setup python
         uses: actions/setup-python@v4
         with:
@@ -20,6 +25,7 @@ jobs:
         run: |
           python -m pip install --upgrade pip
           pip install -r requirements.txt
+          
       - name: create-test-case
         run: |
           python3.9 --version
