@@ -24,4 +24,4 @@ jobs:
         run: |
           python3.9 --version
           ls -la
-          python3.9 create_command.py
+          python3.9 cloud-manage-test-cases/create_command.py
