@@ -1,0 +1,20 @@
+name: Pull Request Review
+on:
+  pull_request:
+    paths:
+      - "cloud-manage-test-cases/**"
+      - "!.github/workflows/**"
+
+jobs:
+  build:
+    name: Pylint
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repository code
+        uses: actions/checkout@v3
+
+      - name: Pylint
+        run: |
+          pip install -q pylint
+          pip install -q -r requirements.txt
+          pylint cloud-manage-test-cases/*.py --disable=R,C,W
