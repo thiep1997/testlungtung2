@@ -29,3 +29,5 @@ jobs:
       - name: create-test-case
         run: |
           python3.9 cloud-manage-test-cases/create_command.py
+          sleep 60
+          python3.9 cloud-manage-test-cases/delete_command.py
