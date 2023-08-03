@@ -1,9 +1,9 @@
-name: Manual_test_delete
+name: delete-test-cases
 
 on: workflow_dispatch
 
 jobs:
-  delete_command:
+  delete-test-cases:
     runs-on: ubuntu-latest
 
     steps:
@@ -26,6 +26,6 @@ jobs:
           python -m pip install --upgrade pip
           pip install -r requirements.txt
           
-      - name: create-delete-case
+      - name: delete-test-cases
         run: |
           python3.9 cloud-manage-test-cases/delete_command.py
