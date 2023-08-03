@@ -3,7 +3,7 @@ name: Manual_test_create
 on: workflow_dispatch
 
 jobs:
-  do-something:
+  create_command:
     runs-on: ubuntu-latest
 
     steps:
